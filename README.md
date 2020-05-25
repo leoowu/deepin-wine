@@ -51,20 +51,18 @@ wget -O- https://deepin-wine.i-m.dev/setup.sh | sh
 
    当然还有一些其他的应用，不逐一列出。
 3. fix中文乱码问题
-修改如下2个文件：
-/opt/deepinwine/tools/run.sh
-/opt/deepinwine/tools/run_v2.sh
+   修改如下2个文件：
+   /opt/deepinwine/tools/run.sh
+   /opt/deepinwine/tools/run_v2.sh
 
-替换 "WINE_CMD"， 如容如下：
-
-#WINE_CMD="deepin-wine"
-WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
-#added by user
-export GTK_IM_MODULE="ibus"
-export QT_IM_MODULE="ibus"
-export XMODIFIERS="@im=ibus"
-
-
+   替换 "WINE_CMD"， 如容如下：
+   ```#WINE_CMD="deepin-wine"
+   WINE_CMD="LC_ALL=zh_CN.UTF-8 deepin-wine"
+   #added by user
+   export GTK_IM_MODULE="ibus"
+   export QT_IM_MODULE="ibus"
+   export XMODIFIERS="@im=ibus"
+   ```
 
 ## 添加仓库过程详解
 
